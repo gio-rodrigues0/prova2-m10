@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  service:
+    build: ./service
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./logs:/app/logs
+  gateway:
+    build: ./gateway
+    ports:
+      - "8000:80"
