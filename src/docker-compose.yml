@@ -1,10 +1,16 @@
 version: '3'
 
 services:
-  service:
-    build: ./service
+  auth:
+    build: ./auth
     ports:
       - "8001:8001"
+    volumes:
+      - ./logs:/app/logs
+  taylor:
+    build: ./taylor_swift
+    ports:
+      - "8002:8002"
     volumes:
       - ./logs:/app/logs
   gateway:

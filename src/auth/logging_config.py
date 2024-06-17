@@ -15,7 +15,7 @@ class LoggerSetup():
         # Adiciona um formatador para o logger - utilizando a sintaxe de JSON
         LOG_FORMAT = '{"time": "%(asctime)s", "name": "%(name)s", "level": "%(levelname)s", "message": "%(message)s"}'
         # Setando o nível do log para INFO.
-        logging.basicConfig(level=logging.WARNING)
+        logging.basicConfig(level=logging.INFO)
         # Adiciona o formatador ao logger
         formatter = logging.Formatter(LOG_FORMAT)
 
